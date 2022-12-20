@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "78301cdb-4094-4e9d-a086-704f44b2622b",
+		"name": "nodejs demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"username\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test - POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Countries List - GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Country/List",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Country",
+						"List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Country - GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Country?country={{capitalId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Country"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "{{capitalId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Capital - GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Country/Capital?capital={{capitalId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Country",
+						"Capital"
+					],
+					"query": [
+						{
+							"key": "capital",
+							"value": "{{capitalId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region - GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Country/Region?region={{regionId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Country",
+						"Region"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "{{regionId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdminRegion - GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Country/AdminRegion?adminRegion={{adminRegionId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Country",
+						"AdminRegion"
+					],
+					"query": [
+						{
+							"key": "adminRegion",
+							"value": "{{adminRegionId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IncomeLevel - GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Country/IncomeLevel?incomeLevel={{IncomeLevelId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Country",
+						"IncomeLevel"
+					],
+					"query": [
+						{
+							"key": "incomeLevel",
+							"value": "{{IncomeLevelId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Country - PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"CountryId\": 45,\n    \"Comment\": \"This is a comment!!!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/Country",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Country"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "countryId",
+			"value": "45",
+			"type": "default"
+		},
+		{
+			"key": "capitalId",
+			"value": "45",
+			"type": "default"
+		},
+		{
+			"key": "regionId",
+			"value": "5",
+			"type": "default"
+		},
+		{
+			"key": "adminRegionId",
+			"value": "6",
+			"type": "default"
+		},
+		{
+			"key": "IncomeLevelId",
+			"value": "1",
+			"type": "default"
+		}
+	]
+}
